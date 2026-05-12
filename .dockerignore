@@ -1,0 +1,21 @@
+# Git
+.git
+.gitignore
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.env
+
+# Application cache / local databases
+*.cache.sqlite
+
+# Tests
+Test/
+test_*.py
