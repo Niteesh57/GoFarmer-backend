@@ -88,3 +88,9 @@ Accepts single coordinates or a bounding box polygon of the farm alongside dynam
 
 **Sample Response Output:**
 Returns deep granular data separated into raw `timeseries` arrays and structured `insights` metadata ready for frontend consumption.
+
+---
+
+## 📄 License
+
+This project is open-source and licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
