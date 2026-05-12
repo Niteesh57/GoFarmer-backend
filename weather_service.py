@@ -1,12 +1,11 @@
 import openmeteo_requests
-import requests_cache
+import requests
 from retry_requests import retry
 import pandas as pd
 from datetime import datetime, timedelta
 
-# Setup the Open-Meteo API client with cache and retry on error
-cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
-retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
+# Setup the Open-Meteo API client with retry on error (no caching)
+retry_session = retry(requests.Session(), retries=5, backoff_factor=0.2)
 openmeteo = openmeteo_requests.Client(session=retry_session)
 
 def fetch_weather_data(min_lat: float, max_lat: float, min_lon: float, max_lon: float, temperature_unit: str = "celsius", start_date: str = None, end_date: str = None):
